@@ -1,0 +1,77 @@
+/* Web-font slot: uncomment the line below and put your font there. A web-font
+   @import must come before the Tailwind import — an @import placed after any
+   other rule is a build error, and it is reported against a line number in the
+   expanded Tailwind output, far past the end of this file, so the message
+   cannot point you at the mistake. */
+/* @import url('https://fonts.googleapis.com/css2?family=Your+Font:wght@400..700&display=swap'); */
+@import "tailwindcss";
+@import "tailwindcss-safe-area";
+
+@theme {
+  --text-xs: 12px;
+  --text-xs--line-height: 16px;
+  --text-sm: 14px;
+  --text-sm--line-height: 20px;
+  --text-base: 16px;
+  --text-base--line-height: 24px;
+  --text-lg: 18px;
+  --text-lg--line-height: 28px;
+  --text-xl: 20px;
+  --text-xl--line-height: 28px;
+  --text-2xl: 24px;
+  --text-2xl--line-height: 32px;
+  --text-3xl: 30px;
+  --text-3xl--line-height: 36px;
+  --text-4xl: 36px;
+  --text-4xl--line-height: 40px;
+  --text-5xl: 48px;
+  --text-5xl--line-height: 52px;
+}
+
+:root {
+  color-scheme: light dark;
+  --bg: #f6f4ee;
+  --surface: #ffffff;
+  --surface-alt: #efeadf;
+  --text: #1c2420;
+  --dim: #6d7268;
+  --border: #e3ded2;
+  --accent: #166534;
+  --accent-soft: #e3efe4;
+  --warn: #b45309;
+  --warn-soft: #f7ecd9;
+  --danger: #b91c1c;
+  --radius: 12px;
+  --space-surface: var(--surface);
+  --space-surface-alt: var(--surface-alt);
+  --space-muted: var(--dim);
+  --space-border: var(--border);
+  --space-accent: var(--accent);
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --bg: #141613;
+    --surface: #1e211d;
+    --surface-alt: #262a24;
+    --text: #eceee8;
+    --dim: #a3a89c;
+    --border: #343830;
+    --accent: #4ade80;
+    --accent-soft: #1d2f22;
+    --warn: #f0b45a;
+    --warn-soft: #33291a;
+    --danger: #f87171;
+  }
+}
+
+.font-display {
+  font-family: Georgia, "Iowan Old Style", "Times New Roman", serif;
+}
+
+/* Phone tap targets: at least 32px tall. */
+@layer base {
+  button, [role="button"], select, summary, input:not([type="checkbox"], [type="radio"]) {
+    min-height: 2rem;
+  }
+}
